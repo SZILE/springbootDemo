@@ -1,4 +1,4 @@
-package org.springboot.test.core.config;
+package com.shipc.test.core.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;

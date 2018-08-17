@@ -4,9 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
+
 /**
- * 应用入口
+ * @author ShiPC
  *
+ * 2018年8月3日
+ * 
+ * 应用入口
  */
 @ComponentScan(basePackages = "com.shipc.test")
 @SpringBootApplication
