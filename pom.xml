@@ -94,6 +94,25 @@
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
 			<version>1.2.4</version>
 		</dependency>
+		<!-- spring-aop支持 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<!-- <version>4.1.6.RELEASE</version> -->
+		</dependency>
+		<!--aspect支持 -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<!-- <version>1.8.5</version> -->
+		</dependency>
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<!-- <version>1.8.5</version> -->
+		</dependency>
+		
+
 		<!-- Spring依赖END -->
 		<!-- 内部依赖BEGIN -->
 
