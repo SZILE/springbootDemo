@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
@@ -16,6 +17,7 @@
 	<modules>
 		<module>springboot-test-core</module>
 		<module>springboot-test-boot</module>
+		<module>springboot-test-mybatis</module>
 	</modules>
 
 	<build>
@@ -33,7 +35,9 @@
 				<includes>
 					<include>**/*.properties</include>
 					<include>**/*.xml</include>
-					<!-- <include>**/*.ini</include> <include>**/*.pem</include> <include>**/*.sql</include> -->
+					<include>**/*.ini</include>
+					<include>**/*.pem</include>
+					<include>**/*.sql</include>
 				</includes>
 				<filtering>false</filtering>
 			</resource>
@@ -67,13 +71,21 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<!-- mybatis整合依赖包 -->
-		<!-- <dependency> <groupId>org.mybatis.spring.boot</groupId> <artifactId>mybatis-spring-boot-starter</artifactId> 
-			<version>1.3.0</version> </dependency> -->
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>1.3.0</version>
+		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+		<!-- <dependency> <groupId>org.springframework</groupId> <artifactId>spring-jdbc</artifactId> 
+			<version>5.0.8.RELEASE</version> </dependency> -->
+
 		<dependency>
 			<groupId>org.mybatis.generator</groupId>
 			<artifactId>mybatis-generator-core</artifactId>
@@ -89,6 +101,7 @@
 			<artifactId>mapper</artifactId>
 			<version>4.0.1</version>
 		</dependency>
+		<!-- 分页支持 -->
 		<dependency>
 			<groupId>com.github.pagehelper</groupId>
 			<artifactId>pagehelper-spring-boot-starter</artifactId>
@@ -113,6 +126,7 @@
 		</dependency>
 
 
+
 		<!-- Spring依赖END -->
 		<!-- 内部依赖BEGIN -->
 
@@ -124,11 +138,13 @@
 			<artifactId>commons-io</artifactId>
 			<version>2.4</version>
 		</dependency>
-	<!-- 	<dependency>
-			<groupId>javax.annotation</groupId>
-			<artifactId>jsr250-api</artifactId>
-			<version>1.0</version>
-		</dependency> -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.38</version>
+		</dependency>
+		<!-- <dependency> <groupId>javax.annotation</groupId> <artifactId>jsr250-api</artifactId> 
+			<version>1.0</version> </dependency> -->
 
 
 		<!-- 第三方依赖END -->

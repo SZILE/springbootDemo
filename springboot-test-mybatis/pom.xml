@@ -8,13 +8,14 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   
-  <artifactId>springboot-test-core</artifactId>
-  <name>springboot-test-core</name>
+  <artifactId>springboot-test-mybatis</artifactId>
+  <name>springboot-test-mybatis</name>
   <url>http://maven.apache.org</url>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
   
   <dependencies>
   </dependencies>
