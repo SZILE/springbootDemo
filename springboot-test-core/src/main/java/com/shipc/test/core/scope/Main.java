@@ -1,5 +1,6 @@
 package com.shipc.test.core.scope;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -20,6 +21,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  * 另外，在SpringBatch中还有一个Scope是使用@StepScope。
  */
 public class Main {
+	@Autowired
+	private static DemoSingletonService singletonService1;
+	@Autowired
+	private static DemoSingletonService singletonService2;
+	
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ScopeConfig.class);
 		
@@ -31,6 +37,8 @@ public class Main {
 		
 		System.out.println("s1与s2是否相等：" + s1.equals(s2));
 		System.out.println("p1与p2是否相等：" + p1.equals(p2));
+		System.out.println(singletonService1);
+		System.out.println("singletonService1与singletonService2是否相等：" + (singletonService1 == singletonService2));
 		
 		context.close();
 	}
