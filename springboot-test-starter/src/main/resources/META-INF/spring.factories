@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.shipc.test.springboot_starter_demo.HelloServiceAutoConfiguration
