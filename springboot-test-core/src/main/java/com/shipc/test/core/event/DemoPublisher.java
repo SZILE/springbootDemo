@@ -17,7 +17,7 @@ public class DemoPublisher {
 	@Autowired
 	ApplicationContext applicationContext;  // 注入ApplicationContext用来发布事件
 	
-	public void bublish(String msg) {
+	public void publish(String msg) {
 		applicationContext.publishEvent(new DemoEvent(this, msg)); //使用ApplicationContext的publishEvent方法来发布。
 	}
 }

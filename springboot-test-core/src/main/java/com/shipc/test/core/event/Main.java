@@ -19,7 +19,7 @@ public class Main {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(EventConfig.class);
 		DemoPublisher demoPublisher = context.getBean(DemoPublisher.class);
-		demoPublisher.bublish("hello application event");
+		demoPublisher.publish("hello application event");
 		context.close();
 	}
 }

@@ -1,162 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.1.RELEASE</version>
-	</parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+    </parent>
 
-	<groupId>com.shipc.test</groupId>
-	<artifactId>springboot-test</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <groupId>com.shipc.test</groupId>
+    <artifactId>springboot-test</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-	<modules>
-		<module>springboot-test-core</module>
-		<module>springboot-test-boot</module>
-		<module>springboot-test-mybatis</module>
+    <modules>
+        <module>springboot-test-core</module>
+        <module>springboot-test-boot</module>
+        <module>springboot-test-mybatis</module>
 
-		<module>design-pattern</module>
-	</modules>
+        <module>design-pattern</module>
+        <module>springboot-test-mvc</module>
+        <module>springboot-test-starter</module>
+    </modules>
 
-	<build>
-		<resources>
-			<resource>
-				<directory>src/main/java</directory>
-				<includes>
-					<include>**/*.properties</include>
-					<include>**/*.xml</include>
-				</includes>
-				<filtering>false</filtering>
-			</resource>
-			<resource>
-				<directory>src/main/resources</directory>
-				<includes>
-					<include>**/*.properties</include>
-					<include>**/*.xml</include>
-					<include>**/*.ini</include>
-					<include>**/*.pem</include>
-					<include>**/*.sql</include>
-				</includes>
-				<filtering>false</filtering>
-			</resource>
-		</resources>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
-	<!-- 配置maven仓库 -->
-	<repositories>
-		<!-- <repository> <id>public_repository</id> <name>Public Repository</name> 
-			<url>http://nexus.com:8081/nexus/content/groups/public/</url> </repository> 
-			<repository> <id>Central</id> <name>Maven Repository Switchboard</name> <layout>default</layout> 
-			<url>http://repo1.maven.org/maven2</url> </repository> -->
-	</repositories>
-	
-	<dependencies>
-		<!-- Spring依赖BEGIN -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                    <include>**/*.ini</include>
+                    <include>**/*.pem</include>
+                    <include>**/*.sql</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <!-- 配置maven仓库 -->
+    <repositories>
+        <!-- <repository> <id>public_repository</id> <name>Public Repository</name>
+            <url>http://nexus.com:8081/nexus/content/groups/public/</url> </repository>
+            <repository> <id>Central</id> <name>Maven Repository Switchboard</name> <layout>default</layout>
+            <url>http://repo1.maven.org/maven2</url> </repository> -->
+    </repositories>
 
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
-		</dependency>
+    <dependencies>
+        <!-- Spring依赖BEGIN -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
-		<!-- <dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.2.0</version>
-		</dependency> -->
-
-		<!-- mybatis整合依赖包 -->
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.3.0</version>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.mybatis.generator</groupId>
-			<artifactId>mybatis-generator-core</artifactId>
-			<version>1.3.6</version>
-		</dependency>
-		<dependency>
-			<groupId>tk.mybatis</groupId>
-			<artifactId>mapper-spring-boot-starter</artifactId>
-			<version>2.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>tk.mybatis</groupId>
-			<artifactId>mapper</artifactId>
-			<version>4.0.1</version>
-		</dependency>
-		<!-- 分页支持 -->
-		<dependency>
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper-spring-boot-starter</artifactId>
-			<version>1.2.4</version>
-		</dependency>
-		<!-- spring-aop支持 -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aop</artifactId>
-			<!-- <version>4.1.6.RELEASE</version> -->
-		</dependency>
-		<!--aspect支持 -->
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId>
-			<!-- <version>1.8.5</version> -->
-		</dependency>
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<!-- <version>1.8.5</version> -->
-		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.1.3.RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
 
 
 
-		<!-- Spring依赖END -->
-		<!-- 内部依赖BEGIN -->
+        <!-- <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.2.0</version>
+        </dependency> -->
 
-		<!-- 内部依赖END -->
-		<!-- 第三方依赖BEGIN -->
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.4</version>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>1.2.38</version>
-		</dependency>
-		<!-- <dependency> <groupId>javax.annotation</groupId> <artifactId>jsr250-api</artifactId> 
-			<version>1.0</version> </dependency> -->
+        <!-- mybatis整合依赖包 -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <!--<version>1.3.0</version>-->
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>1.3.6</version>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+            <version>4.0.1</version>
+        </dependency>
+        <!-- 分页支持 -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+        <!-- spring-aop支持 -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+        </dependency>
+        <!--aspect支持 -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
 
 
-		<!-- 第三方依赖END -->
-	</dependencies>
+        <!-- Spring依赖END -->
+        <!-- 内部依赖BEGIN -->
+
+        <!-- 内部依赖END -->
+        <!-- 第三方依赖BEGIN -->
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.38</version>
+        </dependency>
+        <!-- <dependency> <groupId>javax.annotation</groupId> <artifactId>jsr250-api</artifactId>
+            <version>1.0</version> </dependency> -->
+
+
+        <!-- 第三方依赖END -->
+    </dependencies>
 </project>
