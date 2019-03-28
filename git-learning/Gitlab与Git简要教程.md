@@ -56,7 +56,7 @@
 ------
 #
 ## 二、Gitlab使用
-
+详细Gitlab教程建议查看[易百教程-Gitlab教程](https://www.yiibai.com/gitlab)
 ### 1、设置SSH Keys
   用户登录后首先要设置SSH Keys，否则无法pull和push<br>
   * 点击右上角用户头像——>Settings，选择左边菜单SSH Keys<br>
