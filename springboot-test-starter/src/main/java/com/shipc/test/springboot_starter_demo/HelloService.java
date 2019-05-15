@@ -11,7 +11,7 @@ public class HelloService {  //依据此类的存在与否来创建这个类的B
     private String msg;
 
     public String sayHello() {
-        return "Hello" + msg;
+        return "Hello " + msg;
     }
 
     public String getMsg() {

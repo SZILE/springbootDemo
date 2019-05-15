@@ -30,6 +30,7 @@ public class App {
 	public String index() {
 		return helloService.sayHello();
 	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(App.class, args);
 	}
